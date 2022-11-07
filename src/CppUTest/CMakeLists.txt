@@ -94,8 +94,8 @@ if(NOT CPPUTEST_MEM_LEAK_DETECTION_DISABLED)
     endif()
     target_compile_options(${CppUTestLibName}
         PUBLIC
-            "$<$<COMPILE_LANGUAGE:C,CXX>:${force_include}CppUTest/MemoryLeakDetectorMallocMacros.h>"
-            "$<$<COMPILE_LANGUAGE:CXX>:${force_include}CppUTest/MemoryLeakDetectorNewMacros.h>"
+            $<$<COMPILE_LANGUAGE:C,CXX>:${force_include}CppUTest/MemoryLeakDetectorMallocMacros.h>
+            $<$<COMPILE_LANGUAGE:CXX>:${force_include}CppUTest/MemoryLeakDetectorNewMacros.h>
     )
 endif()
 
